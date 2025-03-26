@@ -10,14 +10,16 @@ namespace RandDice
             int s=int.Parse(args[1]);
 
             Random dice=new Random(s);
-            
+            int soma=0;
 
             for(int i=0;i<n;i++)
             {
-                Console.WriteLine(dice.Next(1,6));
+                int valor=dice.Next(1,6);
+                soma+=valor;
                 
             }
 
+            Console.WriteLine(soma);
 
         }
     }
